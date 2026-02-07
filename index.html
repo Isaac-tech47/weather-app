@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script1.js" defer></script>
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <main class="main-container">
+      <header class="input-container">
+        <input
+          type="text"
+          class="city-input"
+          placeholder="Rechercher Une Ville"
+        />
+        <button type="submit" class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </header>
+
+      <section class="weather-info" style="display: none">
+        <!-- Loading spinner -->
+        <div class="loading-spinner" style="display: none">
+          <div class="spinner"></div>
+        </div>
+
+        <div class="location-date-container">
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <h4 class="country-txt">Lome</h4>
+          </div>
+          <h5 class="current-date-txt regular-txt">Mardi 15 juin 2030</h5>
+        </div>
+
+        <div class="weather-summary-container">
+          <img
+            class="weather-summary-img"
+            src="assets/weather/clouds.svg"
+            alt="weather Icon"
+          />
+          <div class="weather-summary-info">
+            <h1 class="temp-txt">25°C</h1>
+            <h6 class="condition-txt regular-txt">Nuages</h6>
+          </div>
+        </div>
+
+        <div class="weather-conditions-container">
+          <div class="condition-item">
+            <i class="fa-solid fa-droplet"></i>
+            <div class="condition-info">
+              <h5 class="regular-txt">Humidité</h5>
+              <h5 class="humidity-value-txt">55%</h5>
+            </div>
+          </div>
+          <div class="condition-item">
+            <i class="fa-solid fa-wind"></i>
+            <div class="condition-info">
+              <h5 class="regular-txt">Vitesse du vent</h5>
+              <h5 class="wind-value-txt">2 km/h</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="forecast-item-container">
+          <!-- Forecast items will be injected here dynamically -->
+        </div>
+      </section>
+
+      <section class="search-city section-mssg">
+        <img src="assets/message/search-city.png" alt="" />
+        <div>
+          <h1>Rechercher Une Ville</h1>
+          <p class="regular-txt">
+            Renseignez-vous sur les conditions météorologiques de la ville.
+          </p>
+        </div>
+      </section>
+
+      <section class="not-found section-mssg" style="display: none">
+        <img src="assets/message/not-found.png" alt="" />
+        <div>
+          <h1>Ville Introuvable</h1>
+          <p class="regular-txt">
+            Veuillez essayer avec un autre nom de ville.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
